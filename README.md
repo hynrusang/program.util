@@ -224,10 +224,9 @@ Util package**에서 다운받으실 수 있습니다.
 >> public<T> T get(int index, Class<T> type) throws IndexOutOfBoundsException, ClassCastException;
 >> ```
 >> 현재 저장되어 있는 객체들을 type 타입으로 다운캐스팅 하여 반환해줍니다.  
->> 단, index번째 객체가 type 타입으로 다운캐스팅 될 수 없으면, 에러를 반환합니다.  
+>> 단, type가 null이거나, index번째 객체가 type 타입으로 다운캐스팅 될 수 없으면, 에러를 반환합니다.  
 >> 예시로, **Database.get(0, Integer.class)** 처럼 사용할 수 있으며,  
 >> 이때도 0번째 객체가 Integer 타입으로 다운캐스팅 될 수 없으면. 에러를 반환합니다.  
->> 만약, type을 null로 두면, 객체가 반환될 때의 타입이 자동으로 Object 타입이 됩니다.  
 >> ##### remove(int)
 >> ``` java
 >> public void remove(int index);
@@ -342,11 +341,11 @@ Util package**에서 다운받으실 수 있습니다.
 >>> public Database keys();
 >>> ```
 >>> 해당 json의 key들을 반환합니다.
->>> ###### values()
+>>> ###### values(int)
 >>> ```java
->>> public Database values();
+>>> public Database values(int index);
 >>> ```
->>> 해당 json의 value들을 반환합니다.
+>>> 해당 json의 index번째 value들을 반환합니다.
 >>> ###### add(String, ...Object)
 >>> ```java
 >>> public<T> void add(String key, Object ...values);
