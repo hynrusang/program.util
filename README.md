@@ -341,11 +341,11 @@ Util package**에서 다운받으실 수 있습니다.
 >>> public Database keys();
 >>> ```
 >>> 해당 json의 key들을 반환합니다.
->>> ###### values(int)
+>>> ###### values(key)
 >>> ```java
->>> public Database values(int index);
+>>> public Database values(String key);
 >>> ```
->>> 해당 json의 index번째 value들을 반환합니다.
+>>> 해당 json의 key에 할당된 value들을 반환합니다.
 >>> ###### add(String, ...Object)
 >>> ```java
 >>> public<T> void add(String key, Object ...values);
