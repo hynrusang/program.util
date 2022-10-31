@@ -13,6 +13,10 @@ public class _FilePrototype {
 	 */
 	public String getPath() { return filepath; };
 	/**
+	 * 현 파일의 소스 코드를 출력.
+	 */
+	public void print() { System.out.print(toString()); }
+	/**
 	 * 현 파일의 소스 코드를 반환.
 	 * @return 현 파일의 소스 코드.
 	 */
