@@ -116,10 +116,11 @@ final public class Json extends _FilePrototype {
 	 */
 	public Database keys() { return keys; }
 	/**
-	 * 현 Json의 values를 모두 출력.
-	 * @return 현 Json의 values.
+	 * 현 Json의 <span style="font-weight: bold;">index</span>번째 values를 모두 출력.
+	 * @param index : <span style="color:blue; font-weight: bold;">int</span>
+	 * @return 현 Json의 <span style="font-weight: bold;">index</span>번째 values.
 	 */
-	public Database values() { return values; }
+	public Database values(int index) { return values.get(index, Database.class); }
 	public Json(String filename) { this(null, filename); }
 	public Json(String filepath, String filename) {
 		file = new File(filepath, filename + ".json");
