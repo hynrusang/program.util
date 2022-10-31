@@ -361,4 +361,5 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```java
 >>> public void delete(String key);
 >>> ```
+>>> 해당 json의 key를 삭제합니다.
 >> ---
