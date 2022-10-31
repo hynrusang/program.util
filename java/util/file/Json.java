@@ -43,11 +43,10 @@ final public class Json extends _FilePrototype {
 	/**
 	 * 현 Json 파일의 <span style="font-weight: bold;">key</span>값에 <span style="font-weight: bold;">values</span>의 요소들을 추가.
 	 * @param key : <span style="color:blue; font-weight: bold;">String</span>
-	 * @param type : <span style="color:blue; font-weight: bold;">Class</span><span style="color:purple; font-weight: bold;">&lt;T&gt;</span>
-	 * @param values : ...<span style="color:purple; font-weight: bold;">T</span>
+	 * @param values : ...{<span style="color:blue; font-weight: bold;">Object: </span><span style="color:purple; font-weight: bold;">super</span>}
 	 */
-	public<T> void add(String key, Class<T> type, T ...values) {
-		for (T value : values) {
+	public void add(String key, Object ...values) {
+		for (Object value : values) {
 			int index = keys.getIndex(key);
 			try (FileWriter writer = new FileWriter(file); ) {
 				if (index == -1) {
@@ -84,12 +83,11 @@ final public class Json extends _FilePrototype {
 	/**
 	 * 현 Json 파일의 <span style="font-weight: bold;">key</span>값을 <span style="font-weight: bold;">values</span>의 요소들로 대체.
 	 * @param key : <span style="color:blue; font-weight: bold;">String</span>
-	 * @param type : <span style="color:blue; font-weight: bold;">Class</span><span style="color:purple; font-weight: bold;">&lt;T&gt;</span>
-	 * @param values : ...<span style="color:purple; font-weight: bold;">T</span>
+	 * @param values : ...{<span style="color:blue; font-weight: bold;">Object: </span><span style="color:purple; font-weight: bold;">super</span>}
 	 */
-	public<T> void replace(String key, Class<T> type, T ...values) {
+	public void replace(String key, Object ...values) {
 		delete(key);
-		add(key, type, values);
+		add(key, values);
 	}
 	/**
 	 * 현 Json 파일의 <span style="font-weight: bold;">key</span>를 삭제.
