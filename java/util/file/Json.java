@@ -29,12 +29,18 @@ final public class Json extends _FilePrototype {
 			keys.add(parse[0]);
 			for (int i = 1; i < parse.length; i++) {
 				Database value = new Database(false);
-				String reParse[] = parse[i].split(",");
-				if (i == (parse.length - 1)) {
-					for (int j = 0; j < reParse.length; j++) value.add(reParse[j]);
-				} else {
-					keys.add(reParse[reParse.length - 1]);
-					for (int j = 0; j < reParse.length - 1; j++) value.add(reParse[j]);
+				Database reParse = new Database(false);
+				String[] split = parse[i].split(",");
+				for (int j = 0; j < split.length; j++) {
+					try {
+						if (split[j].indexOf(".") != -1) reParse.add(Double.parseDouble(split[j]));
+						else reParse.add(Integer.parseInt(split[j]));
+					} catch (NumberFormatException e) { reParse.add(split[j]); }
+				}
+				if (i == (parse.length - 1)) for (int j = 0; j < reParse.length(); j++) value.add(reParse.get(j, Object.class));
+				else {
+					keys.add(reParse.get(reParse.length() - 1, Object.class));
+					for (int j = 0; j < reParse.length() - 1; j++) value.add(reParse.get(j, Object.class));
 				}
 				values.add(value);
 			}
@@ -59,15 +65,15 @@ final public class Json extends _FilePrototype {
 					}
 				} else {
 					String parse = "[ ";
-					if (value.getClass() == String.class) {
-						for (int i = 0; this.values.get(index, Database.class).isExist(i); i++) parse += "\"" + this.values.get(index, Database.class).get(i, String.class) + "\", ";
-						parse += "\"" + value + "\"";
-						parse += " ]";
-					} else {
-						for (int i = 0; this.values.get(index, Database.class).isExist(i); i++) parse += this.values.get(index, Database.class).get(i, String.class) + ", ";
-						parse += value;
-						parse += " ]";
+					for (int i = 0; this.values.get(index, Database.class).isExist(i); i++) {
+						if (this.values.get(index, Database.class).get(i, Object.class).getClass() == String.class) 
+							parse += "\"" + this.values.get(index, Database.class).get(i, String.class) + "\", ";
+						else 
+							parse += this.values.get(index, Database.class).get(i, Object.class) + ", ";
 					}
+					if (value.getClass() == String.class) parse += "\"" + value + "\"";
+					else parse += value;
+					parse += " ]";
 					if (this.values.get(index, Database.class).length() == 1) {
 						if (value.getClass() == String.class) this.data = this.data.replaceAll("\t\"" + key + "\": \"(.*)\"", "\t\"" + key + "\": " + parse);
 						else this.data = this.data.replaceAll("\t\"" + key + "\": (.*)", "\t\"" + key + "\": " + parse);
