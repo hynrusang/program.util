@@ -35,10 +35,7 @@ final public class Database {
 	 * @param index : <span style="color:blue; font-weight: bold;">int</span>
 	 * @return <span style="font-weight: bold;">index</span>번째 요소 접근이 가능한지의 여부.
 	 */
-	public boolean isExist(int index) {
-		if (0 <= index && index < database.length) return true;
-		else return false;
-	}
+	public boolean isExist(int index) { return (0 <= index && index < database.length); }
 	/**
 	 * <span style="font-weight: bold;">object</span>가 위치해 있는 index를 반환.
 	 * @param object : {<span style="color:blue; font-weight: bold;">Object: </span><span style="color:purple; font-weight: bold;">super</span>}
@@ -99,10 +96,7 @@ final public class Database {
 	 * @return 현 객체와 <span style="color:blue; font-weight: bold;">Object</span>의 타입과 가지고 있는 데이터가 모두 동일한지의 여부.
 	 */
 	@Override
-	public boolean equals(Object object) {
-		if (object.getClass() == Database.class && object.toString().equals(toString())) return true;
-		else return false;
-	}
+	public boolean equals(Object object) { return (object.getClass() == Database.class && object.toString().equals(toString())); }
 	public Database(boolean checkEquals) { 
 		this.checkEquals = checkEquals;
 		database = new Object[0]; 
