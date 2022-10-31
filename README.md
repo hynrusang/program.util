@@ -343,14 +343,14 @@ Util package**에서 다운받으실 수 있습니다.
 >>> public Database values();
 >>> ```
 >>> 해당 json의 value들을 반환합니다.
->>> ###### add(String, Class&lt;T&gt;, ...T)
+>>> ###### add(String, ...Object)
 >>> ```java
->>> public<T> void add(String key, Class<T> type, T ...values);
+>>> public<T> void add(String key, Object ...values);
 >>> ```
 >>> 해당 json의 key의 값에, 추가로 values의 요소들을 추가합니다.
->>> ###### replace(String, Class&lt;T&gt;, ...T)
+>>> ###### replace(String, ...Object)
 >>> ```java
->>> public<T> void replace(String key, Class<T> type, T ...values);
+>>> public<T> void replace(String key, Object ...values);
 >>> ```
 >>> 해당 json의 key의 값을, values의 요소들로 대체합니다.
 >>> ###### delete(String)
