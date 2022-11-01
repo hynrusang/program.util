@@ -286,7 +286,7 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```java
 >>> public void print();
 >>> ```
->>> ---
+>> ---
 >>> ##### public Filepath
 >>> ``` java
 >>> public interface Filepath;
