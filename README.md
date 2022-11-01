@@ -195,7 +195,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
 > ---
 >> ### Database.java **[소스 보기](java/util/Database.java)**
->>> `해당 class 파일은 대부분의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 class가 들어있습니다.`  
+>>> `해당 class 파일은 객체 컨테이너의 역할을 하는 class가 들어있습니다.`  
 >> ---
 >> #### public Database
 >> ``` java
