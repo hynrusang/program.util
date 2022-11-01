@@ -1,6 +1,7 @@
 package util;
 import util.file.*;
 import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -53,12 +54,35 @@ class _Panel {
 			side.add(createbutton);
 			removebutton = new JButton("remove targer Database");
 			side.add(removebutton);
-			mainexplain = new JLabel("현재 저장된 Database:");
+			mainexplain = new JLabel("<html>현재 저장된 Database:<br></html>");
 			main.add(mainexplain);
 			break;
 		case 1:
+			main.setLayout(new GridLayout(9, 1, 1, 10));
 			mainexplain = new JLabel("Filepath에 저장된 경로명:");
+			mainexplain.setHorizontalAlignment(JLabel.CENTER);
 			main.add(mainexplain);
+			JLabel local = new JLabel("Local: "+ Filepath.Local);
+			local.setHorizontalAlignment(JLabel.CENTER);
+			main.add(local);
+			JLabel appdata = new JLabel("Appdata: "+ Filepath.Appdata);
+			appdata.setHorizontalAlignment(JLabel.CENTER);
+			main.add(appdata);
+			JLabel onedrive = new JLabel("Onedrive: "+ Filepath.Onedrive);
+			onedrive.setHorizontalAlignment(JLabel.CENTER);
+			main.add(onedrive);
+			JLabel programfile = new JLabel("Programfiles: "+ Filepath.Programfiles);
+			programfile.setHorizontalAlignment(JLabel.CENTER);
+			main.add(programfile);
+			JLabel programfile86 = new JLabel("Programfiles86: "+ Filepath.Programfiles86);
+			programfile86.setHorizontalAlignment(JLabel.CENTER);
+			main.add(programfile86);
+			JLabel user = new JLabel("User: "+ Filepath.User);
+			user.setHorizontalAlignment(JLabel.CENTER);
+			main.add(user);
+			JLabel downloads = new JLabel("Downloads: "+ Filepath.Downloads);
+			downloads.setHorizontalAlignment(JLabel.CENTER);
+			main.add(downloads);
 		}
 		return panel; 
 	}
