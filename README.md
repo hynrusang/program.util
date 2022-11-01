@@ -37,6 +37,7 @@ Util package**에서 다운받으실 수 있습니다.
 > ---
 >> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
 >>> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
+>> ---
 >> #### Stack
 >> ``` C
 >> typedef struct stack Stack;  
