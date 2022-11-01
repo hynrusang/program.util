@@ -331,8 +331,6 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```  
 >>> Downloads 폴더로 링크되는 환경 변수입니다.  
 >> ---
->>> 해당 File의 소스코드를 출력합니다.  
->> ---
 >>> #### Json.java **[소스 보기](java/util/file/Json.java)**
 >>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`
 >>> ##### Json
