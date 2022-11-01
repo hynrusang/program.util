@@ -18,8 +18,7 @@ Util package**에서 다운받으실 수 있습니다.
 # <img src="c/C_Programming_Language.png" style="width: 20px; height: 20px"> C 
 ```해당 언어의 패키지는 Program Package 중, c package에서 다운받으실 수 있습니다.```
 > ## DataStruct  
-> 
-> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`  
+> ```해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.```  
 > ---
 >> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
 >> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
