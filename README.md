@@ -18,10 +18,7 @@ Util package**에서 다운받으실 수 있습니다.
 # <img src="c/C_Programming_Language.png" style="width: 20px; height: 20px"> C 
 ```해당 언어의 패키지는 Program Package 중, c package에서 다운받으실 수 있습니다.```
 > ## DataStruct
-> 해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 header 파일들의 집합입니다.  
-> visual studio 등의 개발 환경에서, 압축 풀기하여 나온 폴더를 드래그 하여 import 하는 식으로 사용합니다.   
-> 해당 패키지에는 다음과 같은 header 파일들이 포함됩니다.  
-> 
+> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`  
 > ---
 >> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
 >> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
@@ -191,14 +188,11 @@ Util package**에서 다운받으실 수 있습니다.
 # <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
 ```해당 언어의 패키지는 Program Package 중, java package에서 다운받으실 수 있습니다.```
 > ## util
-> 해당 패키지는 거의 모든 타입의 객체를 담을 수 있고,  
-> 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 클래스나,  
-> 외부 파일을 가지고 자유롭게 다룰 수 있게 하는 클래스 등을 담고 있는 유용한 패키지입니다.  
-> eclipseIDE 등의 개발 환경에서 압축 풀기하여 나온 폴더를 import하는 식으로 사용합니다.
->
+> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
 > ---
 >> ### Database.java **[소스 보기](java/util/Database.java)**
->> `해당 class 파일은 거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 class가 들어있습니다.`
+>> `해당 class 파일은 거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 class가 들어있습니다.`  
+>> ---
 >> #### public Database
 >> ``` java
 >> final public class Database;
@@ -266,6 +260,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> ---
 >>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
 >>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
+>>> ---
 >>> ##### FileDependency
 >>> ```java
 >>> class FileDependency;
@@ -288,6 +283,7 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```java
 >>> public void print();
 >>> ```
+>>> ---
 >>> ##### public Filepath
 >>> ``` java
 >>> public interface Filepath;
@@ -332,7 +328,8 @@ Util package**에서 다운받으실 수 있습니다.
 >>> Downloads 폴더로 링크되는 환경 변수입니다.  
 >> ---
 >>> #### Json.java **[소스 보기](java/util/file/Json.java)**
->>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`
+>>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`  
+>>> ---
 >>> ##### Json
 >>> ``` java
 >>> final public class Json;
