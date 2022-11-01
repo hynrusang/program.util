@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author 환류상
  *
  */
-final public class Json extends _FilePrototype {
+final public class Json extends FileDependency {
 	private File file;
 	private Database keys;
 	private Database values;
@@ -46,6 +46,17 @@ final public class Json extends _FilePrototype {
 			}
 		}
 	}
+	/**
+	 * 현 Json의 keys를 모두 출력.
+	 * @return 현 Json의 keys.
+	 */
+	public Database keys() { return keys; }
+	/**
+	 * 현 Json의 <span style="font-weight: bold;">key</span>번째 values를 모두 출력.
+	 * @param key : <span style="color:blue; font-weight: bold;">String</span>
+	 * @return 현 Json의 <span style="font-weight: bold;">key</span>번째 values.
+	 */
+	public Database values(String key) { return values.get(keys.getIndex(key), Database.class); }
 	/**
 	 * 현 Json 파일의 <span style="font-weight: bold;">key</span>값에 <span style="font-weight: bold;">values</span>의 요소들을 추가.
 	 * @param key : <span style="color:blue; font-weight: bold;">String</span>
@@ -110,17 +121,6 @@ final public class Json extends _FilePrototype {
 			writer.flush();
 		} catch (IOException e) { e.printStackTrace(); }
 	}
-	/**
-	 * 현 Json의 keys를 모두 출력.
-	 * @return 현 Json의 keys.
-	 */
-	public Database keys() { return keys; }
-	/**
-	 * 현 Json의 <span style="font-weight: bold;">key</span>번째 values를 모두 출력.
-	 * @param key : <span style="color:blue; font-weight: bold;">String</span>
-	 * @return 현 Json의 <span style="font-weight: bold;">key</span>번째 values.
-	 */
-	public Database values(String key) { return values.get(keys.getIndex(key), Database.class); }
 	public Json(String filename) { this(null, filename); }
 	public Json(String filepath, String filename) {
 		file = new File(filepath, filename + ".json");
