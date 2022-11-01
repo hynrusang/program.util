@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 class _MenuBar extends JMenuBar {
+	private static final long serialVersionUID = 1901920425923L;
 	public static JMenuBar get() {
 		JMenuBar mb = new JMenuBar(); 
 		JMenu screenMenu = new JMenu("핸들러");
@@ -16,12 +17,31 @@ class _MenuBar extends JMenuBar {
 	}
 	private _MenuBar() { }
 }
+class _SidePanel extends JPanel {
+	private static final long serialVersionUID = -33045019205923L;
+	public static JPanel get() {
+		JPanel panel = new JPanel();
+		return panel;
+	}
+	private _SidePanel() { }
+}
+class _MainPanel extends JPanel {
+	private static final long serialVersionUID = 139019205923L;
+	public static JPanel get() {
+		JPanel panel = new JPanel();
+		return panel;
+	}
+	private _MainPanel() { }
+}
 final public class GUI extends JFrame {
+	private static final long serialVersionUID = 25332205923L;
 	public static void start() {
 		GUI main = new GUI();
 		main.setTitle("util 패키지 매니저");
 		main.setJMenuBar(_MenuBar.get());;
 		main.setSize(1040, 720);
+		main.add(_SidePanel.get(), BorderLayout.WEST);
+		main.add(_MainPanel.get(), BorderLayout.CENTER);
 		main.setVisible(true);
 	}
 	private GUI() { }
