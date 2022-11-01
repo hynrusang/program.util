@@ -83,6 +83,7 @@ Util package**에서 다운받으실 수 있습니다.
 > ---
 >> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
 >>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
+>> ---
 >> #### Queue
 >> ``` C
 >> typedef struct queue Queue;
@@ -127,7 +128,8 @@ Util package**에서 다운받으실 수 있습니다.
 >> header에 들어있는 모든 요소를 출력합니다.  
 > ---
 >> ### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
->> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
+>>> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
+>> ---
 >> #### Deque
 >> ``` C
 >> typedef struct deque Deque;
@@ -190,10 +192,10 @@ Util package**에서 다운받으실 수 있습니다.
 # <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
 ```해당 언어의 패키지는 Program Package 중, java package에서 다운받으실 수 있습니다.```
 > ## util
-> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
+>> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
 > ---
 >> ### Database.java **[소스 보기](java/util/Database.java)**
->> `해당 class 파일은 거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 class가 들어있습니다.`  
+>>> `해당 class 파일은 거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 class가 들어있습니다.`  
 >> ---
 >> #### public Database
 >> ``` java
@@ -255,13 +257,10 @@ Util package**에서 다운받으실 수 있습니다.
 >> 현 객체와 object가 서로 타입, 가지고 있는 객체들이 모두 동일한지의 여부를 반환합니다.
 > ---
 >> ### file 패키지
->> ```
->> 해당 패키지는 util의 하위 패키지 중 하나입니다.  
->> java 상에서 file을 손 쉽게 다룰 수 있게 해 줍니다.
->> ```
+>>> `해당 패키지는 java 상에서 file을 손 쉽게 다룰 수 있게 해 주는 class와 interface들이 들어있습니다.`  
 >> ---
 >>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
->>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
+>>>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
 >>> ---
 >>> ##### FileDependency
 >>> ```java
