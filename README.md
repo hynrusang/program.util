@@ -348,12 +348,12 @@ Util package**에서 다운받으실 수 있습니다.
 >>> 해당 json의 key에 할당된 value들을 반환합니다.
 >>> ###### add(String, ...Object)
 >>> ```java
->>> public<T> void add(String key, Object ...values);
+>>> public void add(String key, Object ...values);
 >>> ```
 >>> 해당 json의 key의 값에, 추가로 values의 요소들을 추가합니다.
 >>> ###### replace(String, ...Object)
 >>> ```java
->>> public<T> void replace(String key, Object ...values);
+>>> public void replace(String key, Object ...values);
 >>> ```
 >>> 해당 json의 key의 값을, values의 요소들로 대체합니다.
 >>> ###### delete(String)
