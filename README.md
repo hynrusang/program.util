@@ -258,7 +258,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> 현 객체와 object가 서로 타입, 가지고 있는 객체들이 모두 동일한지의 여부를 반환합니다.  
 > ---
-> ### file 패키지
+> ### file  
 >> `해당 패키지는 java 상에서 file을 손 쉽게 다룰 수 있게 해 주는 class와 interface들이 들어있습니다.`  
 > ---
 >> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
