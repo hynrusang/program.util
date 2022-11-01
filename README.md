@@ -19,10 +19,10 @@ Util package**에서 다운받으실 수 있습니다.
 ```해당 언어의 패키지는 Program Package 중, c package에서 다운받으실 수 있습니다.```
  ## DataStruct
 > `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`
-> ---
+---
 > ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
 >> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
->> ---
+> ---
 >> #### typeSelector
 >> ``` C
 >> #define typeSelector
@@ -192,12 +192,12 @@ Util package**에서 다운받으실 수 있습니다.
 ---
 # <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
 ```해당 언어의 패키지는 Program Package 중, java package에서 다운받으실 수 있습니다.```
-> ## util
->> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
+ ## util
+> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
+ ---
+> ### Database.java **[소스 보기](java/util/Database.java)**
+>> `해당 class 파일은 객체 컨테이너의 역할을 하는 class가 들어있습니다.`  
 > ---
->> ### Database.java **[소스 보기](java/util/Database.java)**
->>> `해당 class 파일은 객체 컨테이너의 역할을 하는 class가 들어있습니다.`  
->> ---
 >> #### public Database
 >> ``` java
 >> final public class Database;
