@@ -22,6 +22,7 @@ Util package**에서 다운받으실 수 있습니다.
 > ---
 >> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
 >>> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
+>> ---
 >> #### typeSelector
 >> ``` C
 >> #define typeSelector
@@ -80,7 +81,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
 >> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
->> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
+>>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
 >> #### Queue
 >> ``` C
 >> typedef struct queue Queue;
