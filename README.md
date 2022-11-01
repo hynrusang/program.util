@@ -198,6 +198,7 @@ Util package**에서 다운받으실 수 있습니다.
 >
 > ---
 >> ### Database.java **[소스 보기](java/util/Database.java)**
+>> `해당 class 파일은 `거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 class가 들어있습니다.`
 >> #### public Database
 >> ``` java
 >> final public class Database;
@@ -264,6 +265,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> ---
 >>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
+>>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
 >>> ##### FileDependency
 >>> ```java
 >>> class FileDependency;
@@ -290,6 +292,7 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ``` java
 >>> public interface Filepath;
 >>> ```
+>>> 파일의 메인 interface입니다.  
 >>> 해당 인터페이스는 window 상에서 주요한 환경 변수를 담고 있는 인터페이스입니다.  
 >>> 추가로 상속받을 필요 없이, Filepath.property처럼 호출할 수 있습니다.  
 >>> ###### Local
@@ -330,12 +333,15 @@ Util package**에서 다운받으실 수 있습니다.
 >> ---
 >>> 해당 File의 소스코드를 출력합니다.  
 >> ---
->>> ##### Json.java **[소스 보기](java/util/file/Json.java)**
+>>> #### Json.java **[소스 보기](java/util/file/Json.java)**
+>>> `java에서 Json을 쉽게 다룰 수 있게 `
+>>> ##### Json
+>>> ``` java
+>>> final public class Json;
 >>> ```
 >>> java 내에서 .json 파일을 쉽게 다룰 수 있게 해주는 Json 클래스입니다.  
 >>> 아직은 구현상의 한계로, json의 키에 또 다른 json을 할당하는 것은 불가능하지만,
 >>> 대신, 하나의 json key에 단일 데이터나, 여러 타입의 데이터들을 할당하는 것은 가능합니다.
->>> ```
 >>> ###### keys()
 >>> ```java
 >>> public Database keys();
