@@ -17,70 +17,72 @@ Util package**에서 다운받으실 수 있습니다.
 해당 저장소에 사용된 언어들은 다음과 같습니다.
 # <img src="c/C_Programming_Language.png" style="width: 20px; height: 20px"> C 
 ```해당 언어의 패키지는 Program Package 중, c package에서 다운받으실 수 있습니다.```
-> ## DataStruct
->> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`
+ ## DataStruct
+> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`
+ ---
+> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
+>> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
 > ---
->> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
->>> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
->> ---
->>> #### typeSelector
->>> ``` C
->>> #define typeSelector
->>> ```
->>> 같은 패키지에 존재하는 다른 헤더파일의 **prints 함수**의 출력 형식을 지정합니다.  
->>> 후의 **element**와 일치하는 형식을 지정하시기를 추천드립니다.  
->>> #### element
->>> ``` C
->>> typedef {type} element;
->>> ```
->>> 같은 패키지에 존재하는 다른 헤더파일이 저장할 데이터의 타입을 지정합니다.  
+>> #### typeSelector
+>> ``` C
+>> #define typeSelector
+>> ```
+>> 같은 패키지에 존재하는 다른 헤더파일의 **prints 함수**의 출력 형식을 지정합니다.  
+>> 후의 **element**와 일치하는 형식을 지정하시기를 추천드립니다.  
+>> #### element
+>> ``` C
+>> typedef {type} element;
+>> ```
+>> 같은 패키지에 존재하는 다른 헤더파일이 저장할 데이터의 타입을 지정합니다.  
 > ---
->> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
->>> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
->> ---
->>> #### Stack
->>> ``` C
->>> typedef struct stack Stack;  
->>> ```
->>> 하나의 데이터를 저장하는 역할을 합니다.  
->>> #### StackHeader
->>> ``` C
->>> typedef struct stackheader StackHeader;
->>> ```
->>> Stack 구조체들을 저장하는 역할을 합니다.  
->>> #### init()
->>> ``` C
->>> StackHeader* init();
->>> ```
->>> 동적으로 **StackHeader 구조체**를 초기화 시켜 줍니다.  
->>> java에서의 객체 생성처럼 비슷하게, **StackHeader\* header = init();** 처럼 사용합니다.  
->>> #### isEmpty(StackHeader*)
->>> ``` C
->>> int isEmpty(StackHeader* header);
->>> ```
->>> header가 비어있는지의 여부를 반환합니다.  
->>> #### push(StackHeader*, element)
->>> ``` C
->>> void push(StackHeader* header, element data);
->>> ```
->>> header의 뒤에 data를 저장합니다.  
->>> #### pop(StackHeader*)
->>> ``` C
->>>> element pop(StackHeader* header);
->>> ```
->>> header의 마지막 값을 삭제하고, 해당 값을 반환합니다.  
->>> #### peek(StackHeader*)
->>> ``` C
->>> element peek(StackHeader* header);
->>> ```
->>> header의 마지막 값을 반환합니다.  
->>> **pop 함수**와는 다르게, 마지막 값을 삭제하지는 않습니다.  
->>> #### prints(StackHeader*)
->>> ``` C
->>> void prints(StackHeader* header);
->>> ```
->>> header에 들어있는 요소를 모두 출력합니다.  
+---
+> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
+>> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
 > ---
+>> #### Stack
+>> ``` C
+>> typedef struct stack Stack;  
+>> ```
+>> 하나의 데이터를 저장하는 역할을 합니다.  
+>> #### StackHeader
+>> ``` C
+>> typedef struct stackheader StackHeader;
+>> ```
+>> Stack 구조체들을 저장하는 역할을 합니다.  
+>> #### init()
+>> ``` C
+>> StackHeader* init();
+>> ```
+>> 동적으로 **StackHeader 구조체**를 초기화 시켜 줍니다.  
+>> java에서의 객체 생성처럼 비슷하게, **StackHeader\* header = init();** 처럼 사용합니다.  
+>> #### isEmpty(StackHeader*)
+>> ``` C
+>> int isEmpty(StackHeader* header);
+>> ```
+>> header가 비어있는지의 여부를 반환합니다.  
+>> #### push(StackHeader*, element)
+>> ``` C
+>> void push(StackHeader* header, element data);
+>> ```
+>> header의 뒤에 data를 저장합니다.  
+>> #### pop(StackHeader*)
+>> ``` C
+>> element pop(StackHeader* header);
+>> ```
+>> header의 마지막 값을 삭제하고, 해당 값을 반환합니다.  
+>> #### peek(StackHeader*)
+>> ``` C
+>> element peek(StackHeader* header);
+>> ```
+>> header의 마지막 값을 반환합니다.  
+>> **pop 함수**와는 다르게, 마지막 값을 삭제하지는 않습니다.  
+>> #### prints(StackHeader*)
+>> ``` C
+>> void prints(StackHeader* header);
+>> ```
+>> header에 들어있는 요소를 모두 출력합니다.  
+> ---
+---
 >> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
 >>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
 >> ---
