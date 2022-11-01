@@ -81,10 +81,9 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
----
->> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
->>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
->> ---
+> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
+>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
+> ---
 >> #### Queue
 >> ``` C
 >> typedef struct queue Queue;
@@ -128,9 +127,9 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> header에 들어있는 모든 요소를 출력합니다.  
 > ---
->> ### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
->>> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
->> ---
+> ### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
+>> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
+> ---
 >> #### Deque
 >> ``` C
 >> typedef struct deque Deque;
@@ -190,6 +189,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
+---
 # <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
 ```해당 언어의 패키지는 Program Package 중, java package에서 다운받으실 수 있습니다.```
 > ## util
