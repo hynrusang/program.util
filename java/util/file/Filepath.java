@@ -1,6 +1,8 @@
 package util.file;
+import java.io.File;
 
 class FileDependency {
+	protected File file;
 	protected String filepath;
 	protected String data;
 	/**
@@ -18,6 +20,11 @@ class FileDependency {
 	 * 현 파일의 소스 코드를 출력.
 	 */
 	public void print() { System.out.print(toString()); };
+	protected FileDependency(String filepath, String filename) {
+		file = new File(filepath, filename + ".json");
+		this.filepath = filepath;
+		this.data = "";
+	}
 }
 /**
  * 주요한 window 환경 변수를 담고 있는 Filepath 인터페이스.

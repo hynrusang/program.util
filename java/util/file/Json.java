@@ -1,6 +1,5 @@
 package util.file;
 import util.Database;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,7 +10,6 @@ import java.io.IOException;
  *
  */
 final public class Json extends FileDependency {
-	private File file;
 	private Database keys;
 	private Database values;
 	private void _parsing() {
@@ -123,9 +121,7 @@ final public class Json extends FileDependency {
 	}
 	public Json(String filename) { this(null, filename); }
 	public Json(String filepath, String filename) {
-		file = new File(filepath, filename + ".json");
-		this.filepath = filepath;
-		this.data = "";
+		super(filepath, filename);
 		keys = new Database(true);
 		if (!file.exists()) try (FileWriter writer = new FileWriter(file);) { 
 			file.createNewFile();
