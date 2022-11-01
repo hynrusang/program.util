@@ -31,7 +31,7 @@ class _MainPanel extends JPanel {
 	private _MainPanel() { }
 }
 final public class GUI extends JFrame {
-	public static void start() {
+	public static void main(String args[]) {
 		GUI main = new GUI();
 		main.setTitle("util 패키지 매니저");
 		main.setJMenuBar(_MenuBar.get());;
