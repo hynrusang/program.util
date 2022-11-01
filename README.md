@@ -10,204 +10,201 @@
 이미 작성한 소스코드라도, 더 발전시킬 수 있다면, 더 발전시킬 것을 선서합니다.
 ```
 ---
-# 저장소 설명 
+저장소 설명 
 > 해당 저장소는 다양한 프로그래밍 언어에서 사용가능한 여러 도움이 될 package를 포함하고 있습니다.  
 해당 저장소에 저장된 package들은 **[메인 사이트](https://hynrusang.github.io/)의 기록 보관소 중,  
 Util package**에서 다운받으실 수 있습니다.  
 해당 저장소에 사용된 언어들은 다음과 같습니다.
-## <img src="c/C_Programming_Language.png" style="width: 20px; height: 20px"> C 
+# <img src="c/C_Programming_Language.png" style="width: 20px; height: 20px"> C 
 ```해당 언어의 패키지는 Program Package 중, c package에서 다운받으실 수 있습니다.```
-> ### DataStruct
+> ## DataStruct
 > 해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 header 파일들의 집합입니다.  
 > visual studio 등의 개발 환경에서, 압축 풀기하여 나온 폴더를 드래그 하여 import 하는 식으로 사용합니다.   
 > 해당 패키지에는 다음과 같은 header 파일들이 포함됩니다.  
 > 
 > ---
->> #### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
+>> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
 >> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
->> ##### typeSelector
+>> #### typeSelector
 >> ``` C
 >> #define typeSelector
 >> ```
 >> 같은 패키지에 존재하는 다른 헤더파일의 **prints 함수**의 출력 형식을 지정합니다.  
 >> 후의 **element**와 일치하는 형식을 지정하시기를 추천드립니다.  
->> ##### element
+>> #### element
 >> ``` C
 >> typedef {type} element;
 >> ```
 >> 같은 패키지에 존재하는 다른 헤더파일이 저장할 데이터의 타입을 지정합니다.  
 > ---
->> #### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
+>> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
 >> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
->> ##### Stack
+>> #### Stack
 >> ``` C
 >> typedef struct stack Stack;  
 >> ```
 >> 하나의 데이터를 저장하는 역할을 합니다.  
->> ##### StackHeader
+>> #### StackHeader
 >> ``` C
 >> typedef struct stackheader StackHeader;
 >> ```
 >> Stack 구조체들을 저장하는 역할을 합니다.  
->> ##### init()
+>> #### init()
 >> ``` C
 >> StackHeader* init();
 >> ```
 >> 동적으로 **StackHeader 구조체**를 초기화 시켜 줍니다.  
 >> java에서의 객체 생성처럼 비슷하게, **StackHeader\* header = init();** 처럼 사용합니다.  
->> ##### isEmpty(StackHeader*)
+>> #### isEmpty(StackHeader*)
 >> ``` C
 >> int isEmpty(StackHeader* header);
 >> ```
 >> header가 비어있는지의 여부를 반환합니다.  
->> ##### push(StackHeader*, element)
+>> #### push(StackHeader*, element)
 >> ``` C
 >> void push(StackHeader* header, element data);
 >> ```
 >> header의 뒤에 data를 저장합니다.  
->> ##### pop(StackHeader*)
+>> #### pop(StackHeader*)
 >> ``` C
 >> element pop(StackHeader* header);
 >> ```
 >> header의 마지막 값을 삭제하고, 해당 값을 반환합니다.  
->> ##### peek(StackHeader*)
+>> #### peek(StackHeader*)
 >> ``` C
 >> element peek(StackHeader* header);
 >> ```
 >> header의 마지막 값을 반환합니다.  
 >> **pop 함수**와는 다르게, 마지막 값을 삭제하지는 않습니다.  
->> ##### prints(StackHeader*)
+>> #### prints(StackHeader*)
 >> ``` C
 >> void prints(StackHeader* header);
 >> ```
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
->> #### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
+>> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
 >> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
->> ##### Queue
+>> #### Queue
 >> ``` C
 >> typedef struct queue Queue;
 >> ```
 >> 하나의 데이터를 저장하는 역할을 합니다.  
->> ##### QueueHeader
+>> #### QueueHeader
 >> ``` C
 >> typedef struct queueheader QueueHeader;
 >> ```
 >> Queue 구조체들을 저장하는 역할을 합니다.  
->> ##### init()
+>> #### init()
 >> ``` C
 >> QueueHeader* init();
 >> ```
 >> 동적으로 QueueHeader 구조체를 초기화 시켜 줍니다.  
 >> java에서의 객체 생성처럼 비슷하게, **QueueHeader\* header = init();** 처럼 사용합니다.  
->> ##### isEmpty(QueueHeader*)
+>> #### isEmpty(QueueHeader*)
 >> ``` C
 >> int isEmpty(QueueHeader* header);
 >> ```
 >> header가 비어있는지의 여부를 반환합니다.  
->> ##### put(QueueHeader* header, element data)
+>> #### put(QueueHeader* header, element data)
 >> ``` C
 >> void put(QueueHeader* header, element data);
 >> ```
 >> header의 뒤에 data를 저장합니다.  
->> ##### get(QueueHeader*)
+>> #### get(QueueHeader*)
 >> ``` C
 >> element get(QueueHeader* header);
 >> ```
 >> header의 처음 값을 삭제하고, 해당 값을 반환합니다.  
->> ##### peek(QueueHeader*)
+>> #### peek(QueueHeader*)
 >> ``` C
 >> element peek(QueueHeader* header);
 >> ```
 >> header의 처음 값을 반환합니다.  
 >> **get 함수**와는 다르게, 처음 값을 삭제하지는 않습니다.  
->> ##### prints(QueueHeader*)
+>> #### prints(QueueHeader*)
 >> ``` C
 >> void prints(QueueHeader* header);
 >> ```
 >> header에 들어있는 모든 요소를 출력합니다.  
 > ---
->> #### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
+>> ### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
 >> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
->> ##### Deque
+>> #### Deque
 >> ``` C
 >> typedef struct deque Deque;
 >> ```
 >> 하나의 데이터를 저장하는 역할을 합니다.  
->> ##### DequeHeader
+>> #### DequeHeader
 >> ``` C
 >> typedef struct dequeheader DequeHeader;
 >> ```
 >> Deque 구조체들을 저장하는 역할을 합니다.  
->> ##### init()
+>> #### init()
 >> ``` C
 >> DequeHeader* init();
 >> ```
 >> 동적으로 DequeHeader 구조체를 초기화 시켜 줍니다.  
 >> java에서의 객체 생성처럼 비슷하게, **DequeHeader\* header = init();** 처럼 사용합니다.  
->> ##### isEmpty(DequeHeader*)
+>> #### isEmpty(DequeHeader*)
 >> ``` C
 >> int isEmpty(DequeHeader* header);
 >> ```
 >> header가 비어있는지의 여부를 반환합니다.  
->> ##### inFront(DequeHeader*)
+>> #### inFront(DequeHeader*)
 >> ``` C
 >> void inFront(DequeHeader* header, element data);
 >> ```
 >> header의 앞에 data를 저장합니다.  
->> ##### inBack(DequeHeader*)
+>> #### inBack(DequeHeader*)
 >> ``` C
 >> void inBack(DequeHeader* header, element data);
 >> ```
 >> header의 뒤에 data를 저장합니다.  
->> ##### outFront(DequeHeader*)
+>> #### outFront(DequeHeader*)
 >> ``` C
 >> element outFront(DequeHeader* header);
 >> ```
 >> header의 처음 값을 삭제하고, 해당 값을 반환합니다.  
->> ##### outBack(DequeHeader*)
+>> #### outBack(DequeHeader*)
 >> ``` C
 >> element outBack(DequeHeader* header);
 >> ```
 >> header의 마지막 값을 삭제하고, 해당 값을 반환합니다.  
->> ##### peekFront(DequeHeader*)
+>> #### peekFront(DequeHeader*)
 >> ``` C
 >> element peekFront(DequeHeader* header);
 >> ```
 >> header의 처음 값을 반환합니다.  
 >> **outFront 함수**와는 다르게, 처음 값을 삭제하지는 않습니다.  
->> ##### peekBack(DequeHeader*)
+>> #### peekBack(DequeHeader*)
 >> ``` C
 >> element peekBack(DequeHeader* header);
 >> ```
 >> header의 마지막 값을 반환합니다.  
 >> **outBack 함수**와는 다르게, 마지막 값을 삭제하지는 않습니다.  
->> ##### prints(DequeHeader*)
+>> #### prints(DequeHeader*)
 >> ``` C
 >> void prints(DequeHeader* header);
 >> ```
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
-## <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
+# <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
 ```해당 언어의 패키지는 Program Package 중, java package에서 다운받으실 수 있습니다.```
-> ### util
+> ## util
 > 해당 패키지는 거의 모든 타입의 객체를 담을 수 있고,  
 > 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 클래스나,  
 > 외부 파일을 가지고 자유롭게 다룰 수 있게 하는 클래스 등을 담고 있는 유용한 패키지입니다.  
 > eclipseIDE 등의 개발 환경에서 압축 풀기하여 나온 폴더를 import하는 식으로 사용합니다.
 >
 > ---
->> #### Database.java **[소스 보기](java/util/Database.java)**
->> ```
->> 해당 클래스는 거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 클래스입니다.  
->> 해당 클래스가 equals 체크를 통해 중복되는 객체를 저장할지의 여부는, 생성자의 첫번째 인수를 통해 결정하실 수 있습니다.  
->> ```
->> ##### public Database
+>> ### Database.java **[소스 보기](java/util/Database.java)**
+>> #### public Database
 >> ``` java
 >> final public class Database;
 >> ```
->> 파일의 메인 클래스입니다.  
->> ##### Database 생성자
+>> 해당 클래스는 거의 모든 타입의 객체를 담을 수 있고, 원하는 타입으로 다시 꺼낼 수 있는 가변 리스트를 구현한 클래스입니다.  
+>> 해당 클래스가 equals 체크를 통해 중복되는 객체를 저장할지의 여부는, 생성자의 첫번째 인수를 통해 결정하실 수 있습니다.  
+>> ##### 생성자
 >> ``` java
 >> public Database(boolean checkEquals);
 >> public Database(boolean checkEquals, Object ...object);
@@ -260,17 +257,41 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> 현 객체와 object가 서로 타입, 가지고 있는 객체들이 모두 동일한지의 여부를 반환합니다.
 > ---
->> #### file 패키지
+>> ### file 패키지
 >> ```
 >> 해당 패키지는 util의 하위 패키지 중 하나입니다.  
 >> java 상에서 file을 손 쉽게 다룰 수 있게 해 줍니다.
 >> ```
 >> ---
->>> ##### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
+>>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
+>>> ##### FileDependency
+>>> ```java
+>>> class FileDependency;
+>>> ```
+>>> 다른 내부 File 관련 클래스들이 공통적으로 상속받게 될 클래스 입니다.  
+>>> 해당 클래스를 직접적으로 생성하거나, 외부에서 호출하는 것은 불가능합니다,  
+>>> 반드시, 상속받게 될 다른 내부 File 관련 클래스들을 통해, 해당 클래스의 매서드를 호출하십시오.  
+>>> ###### getPath()
+>>> ```java
+>>> public String getPath();
+>>> ```
+>>> 해당 File이 만들어 질 디렉토리를 반환합니다.  
+>>> 만약, 현 디렉토리 내 만들어진다면, null을 반환합니다.
+>>> ###### toString()
+>>> ```java
+>>> @Override public String toString();
+>>> ```
+>>> 해당 File의 소스코드를 반환합니다.
+>>> ###### print()
+>>> ```java
+>>> public void print();
+>>> ```
+>>> ##### public Filepath
+>>> ``` java
+>>> public interface Filepath;
 >>> ```
 >>> 해당 인터페이스는 window 상에서 주요한 환경 변수를 담고 있는 인터페이스입니다.  
->>> 추가로 상속받을 필요 없이, Filepath.property처럼 호출할 수 있습니다.
->>> ```
+>>> 추가로 상속받을 필요 없이, Filepath.property처럼 호출할 수 있습니다.  
 >>> ###### Local
 >>> ```java
 >>> public static String Local;
@@ -307,27 +328,6 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```  
 >>> Downloads 폴더로 링크되는 환경 변수입니다.  
 >> ---
->>> ##### _FilePrototype.java **[소스 보기](java/util/file/_FilePrototype.java)**
->>> ```
->>> 다른 File 관련 클래스들이 공통적으로 상속받게 될 클래스 입니다.  
->>> 해당 클래스를 직접적으로 생성하거나, 외부에서 호출하는 것은 불가능합니다,  
->>> 반드시, 상속받게 될 다른 File 관련 클래스들을 통해, 해당 클래스의 매서드를 호출하십시오.
->>> ```
->>> ###### getPath()
->>> ```java
->>> public String getPath();
->>> ```
->>> 해당 File이 만들어 질 디렉토리를 반환합니다.  
->>> 만약, 현 디렉토리 내 만들어진다면, null을 반환합니다.
->>> ###### toString()
->>> ```java
->>> @Override public String toString();
->>> ```
->>> 해당 File의 소스코드를 반환합니다.
->>> #### print()
->>> ```java
->>> public void print();
->>> ```
 >>> 해당 File의 소스코드를 출력합니다.  
 >> ---
 >>> ##### Json.java **[소스 보기](java/util/file/Json.java)**
