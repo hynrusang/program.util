@@ -46,15 +46,17 @@ class _Panel {
 		JButton removebutton;
 		side.setLayout(new GridLayout(10, 1, 1, 20));
 		JPanel main = new JPanel();
-		JLabel mainexplain;
+		JLabel mainexplain = new JLabel();
 		panel.add(main);
 		switch (num) {
 		case 0:
+			main.setLayout(new GridLayout(50, 1, 1, 2));
+			mainexplain = new JLabel("현재 저장된 Database:");
+			mainexplain.setHorizontalAlignment(JLabel.CENTER);
 			createbutton = new JButton("create new Database");
 			side.add(createbutton);
 			removebutton = new JButton("remove targer Database");
 			side.add(removebutton);
-			mainexplain = new JLabel("<html>현재 저장된 Database:<br></html>");
 			main.add(mainexplain);
 			break;
 		case 1:
