@@ -5,20 +5,24 @@ import javax.swing.*;
 
 class _MenuBar extends JMenuBar {
 	public static JMenuBar get() {
-		JMenuBar mb = new JMenuBar(); 
-		JMenu screenMenu = new JMenu("핸들러");
-		screenMenu.add(new JMenuItem("U.Database"));
-		screenMenu.addSeparator();
-		screenMenu.add(new JMenuItem("U.file.Filepath"));
-		screenMenu.add(new JMenuItem("U.file.Json"));
-		mb.add(screenMenu);
-		return mb;
+		JMenuBar menubar = new JMenuBar(); 
+		JMenu menu = new JMenu("핸들러");
+		menubar.add(menu);
+		JMenuItem item1 = new JMenuItem("U.Database");
+		menu.add(item1);
+		menu.addSeparator();
+		JMenuItem item2 = new JMenuItem("U.file.Filepath");
+		menu.add(item2);
+		JMenuItem item3 = new JMenuItem("U.file.Json");
+		menu.add(item3);
+		return menubar;
 	}
 	private _MenuBar() { }
 }
 class _SidePanel extends JPanel {
-	public static JPanel get() {
+	public static JPanel get(JButton ...buttons) {
 		JPanel panel = new JPanel();
+		for (JButton button : buttons) { panel.add(button); }
 		return panel;
 	}
 	private _SidePanel() { }
