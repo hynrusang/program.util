@@ -17,12 +17,12 @@ Util package**에서 다운받으실 수 있습니다.
 해당 저장소에 사용된 언어들은 다음과 같습니다.
 # <img src="c/C_Programming_Language.png" style="width: 20px; height: 20px"> C 
 ```해당 언어의 패키지는 Program Package 중, c package에서 다운받으실 수 있습니다.```
-> ## DataStruct
->> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`
+ ## DataStruct
+> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`
+---
+> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
+>> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
 > ---
->> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
->>> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
->> ---
 >> #### typeSelector
 >> ``` C
 >> #define typeSelector
@@ -35,9 +35,9 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> 같은 패키지에 존재하는 다른 헤더파일이 저장할 데이터의 타입을 지정합니다.  
 > ---
->> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
->>> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
->> ---
+> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
+>> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
+> ---
 >> #### Stack
 >> ``` C
 >> typedef struct stack Stack;  
@@ -81,9 +81,9 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
->> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
->>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
->> ---
+> ### Queue.h **[소스 보기](c/datastruct/Queue.h)** 
+>> `해당 헤더파일은 동적 Queue을 구현한 헤더파일입니다.`  
+> ---
 >> #### Queue
 >> ``` C
 >> typedef struct queue Queue;
@@ -127,9 +127,9 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> header에 들어있는 모든 요소를 출력합니다.  
 > ---
->> ### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
->>> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
->> ---
+> ### Deque.h **[소스 보기](c/datastruct/Deque.h)** 
+>> `해당 헤더파일은 동적 Deque를 구현한 헤더파일입니다.`  
+> ---
 >> #### Deque
 >> ``` C
 >> typedef struct deque Deque;
@@ -189,14 +189,15 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```
 >> header에 들어있는 요소를 모두 출력합니다.  
 > ---
+---
 # <img src="java/Java_Programming_Language.png" style="width: 20px; height: 20px"> Java
 ```해당 언어의 패키지는 Program Package 중, java package에서 다운받으실 수 있습니다.```
-> ## util
->> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
+ ## util
+> `해당 패키지는 java 프로그래밍에 도움이 되는 유용한 클래스들을 담고 있는 패키지입니다.`  
+ ---
+> ### Database.java **[소스 보기](java/util/Database.java)**
+>> `해당 class 파일은 객체 컨테이너의 역할을 하는 class가 들어있습니다.`  
 > ---
->> ### Database.java **[소스 보기](java/util/Database.java)**
->>> `해당 class 파일은 객체 컨테이너의 역할을 하는 class가 들어있습니다.`  
->> ---
 >> #### public Database
 >> ``` java
 >> final public class Database;
@@ -255,14 +256,14 @@ Util package**에서 다운받으실 수 있습니다.
 >> ```java
 >> @Override public boolean equals(Object object);
 >> ```
->> 현 객체와 object가 서로 타입, 가지고 있는 객체들이 모두 동일한지의 여부를 반환합니다.
+>> 현 객체와 object가 서로 타입, 가지고 있는 객체들이 모두 동일한지의 여부를 반환합니다.  
 > ---
->> ### file 패키지
->>> `해당 패키지는 java 상에서 file을 손 쉽게 다룰 수 있게 해 주는 class와 interface들이 들어있습니다.`  
+> ### file  
+>> `해당 패키지는 java 상에서 file을 손 쉽게 다룰 수 있게 해 주는 class와 interface들이 들어있습니다.`  
+> ---
+>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
+>>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
 >> ---
->>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
->>>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
->>> ---
 >>> ##### FileDependency
 >>> ```java
 >>> class FileDependency;
@@ -285,7 +286,7 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```java
 >>> public void print();
 >>> ```
->>> ---
+>> ---
 >>> ##### public Filepath
 >>> ``` java
 >>> public interface Filepath;
@@ -329,9 +330,9 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```  
 >>> Downloads 폴더로 링크되는 환경 변수입니다.  
 >> ---
->>> #### Json.java **[소스 보기](java/util/file/Json.java)**
->>>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`  
->>> ---
+>> #### Json.java **[소스 보기](java/util/file/Json.java)**
+>>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`  
+>> ---
 >>> ##### Json
 >>> ``` java
 >>> final public class Json;
@@ -366,3 +367,5 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```
 >>> 해당 json의 key를 삭제합니다.
 >> ---
+> ---
+---
