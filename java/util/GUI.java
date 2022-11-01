@@ -28,6 +28,7 @@ class _MenuBar extends JMenuBar {
 		menu.add(item1);
 		menu.addSeparator();
 		JMenuItem item2 = new JMenuItem("U.file.Filepath");
+		item2.addActionListener(new ChangePanel(1));
 		menu.add(item2);
 		JMenuItem item3 = new JMenuItem("U.file.Json");
 		menu.add(item3);
@@ -40,15 +41,23 @@ class _Panel {
 		Database panel = new Database(false);
 		JPanel side = new JPanel();
 		panel.add(side);
+		JButton createbutton;
+		JButton removebutton;
 		side.setLayout(new GridLayout(10, 1, 1, 20));
 		JPanel main = new JPanel();
+		JLabel mainexplain;
 		panel.add(main);
-		if (num == 0) {
-			JButton databasecreate = new JButton("create new Database");
-			side.add(databasecreate);
-			JButton databaseremove = new JButton("remove targer Database");
-			side.add(databaseremove);
-			JLabel mainexplain = new JLabel("현재 저장된 Database:");
+		switch (num) {
+		case 0:
+			createbutton = new JButton("create new Database");
+			side.add(createbutton);
+			removebutton = new JButton("remove targer Database");
+			side.add(removebutton);
+			mainexplain = new JLabel("현재 저장된 Database:");
+			main.add(mainexplain);
+			break;
+		case 1:
+			mainexplain = new JLabel("Filepath에 저장된 경로명:");
 			main.add(mainexplain);
 		}
 		return panel; 
