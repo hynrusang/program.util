@@ -21,7 +21,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> `해당 패키지는 동적 자료구조를 쉽게 다룰 수 있는 c header 파일들이 들어있습니다.`
 > ---
 >> ### CustomType.h **[소스 보기](c/datastruct/CustomType.h)**  
->> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
+>>> `해당 헤더파일은 같은 패키지의 다른 헤더파일에서 사용하는 데이터들을 다룹니다.`  
 >> #### typeSelector
 >> ``` C
 >> #define typeSelector
@@ -35,7 +35,7 @@ Util package**에서 다운받으실 수 있습니다.
 >> 같은 패키지에 존재하는 다른 헤더파일이 저장할 데이터의 타입을 지정합니다.  
 > ---
 >> ### Stack.h **[소스 보기](c/datastruct/Stack.h)**  
->> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
+>>> `해당 헤더파일은 동적 Stack을 구현한 헤더파일입니다.`  
 >> #### Stack
 >> ``` C
 >> typedef struct stack Stack;  
