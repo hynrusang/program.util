@@ -257,14 +257,13 @@ Util package**에서 다운받으실 수 있습니다.
 >> @Override public boolean equals(Object object);
 >> ```
 >> 현 객체와 object가 서로 타입, 가지고 있는 객체들이 모두 동일한지의 여부를 반환합니다.  
->>
+> ---
+> ### file 패키지
+>> `해당 패키지는 java 상에서 file을 손 쉽게 다룰 수 있게 해 주는 class와 interface들이 들어있습니다.`  
+> ---
+>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
+>>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
 >> ---
->> ### file 패키지
->>> `해당 패키지는 java 상에서 file을 손 쉽게 다룰 수 있게 해 주는 class와 interface들이 들어있습니다.`  
->> ---
->>> #### Filepath.java **[소스 보기](java/util/file/Filepath.java)**
->>>> `해당 interface 파일은 내부 File 클래스들의 기본이 되는 class와 interface가 들어있습니다.`
->>> ---
 >>> ##### FileDependency
 >>> ```java
 >>> class FileDependency;
@@ -331,9 +330,9 @@ Util package**에서 다운받으실 수 있습니다.
 >>> ```  
 >>> Downloads 폴더로 링크되는 환경 변수입니다.  
 >> ---
->>> #### Json.java **[소스 보기](java/util/file/Json.java)**
->>>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`  
->>> ---
+>> #### Json.java **[소스 보기](java/util/file/Json.java)**
+>>> `해당 class 파일은 Json을 쉽게 다룰 수 있게 해 주는 class가 들어있습니다.`  
+>> ---
 >>> ##### Json
 >>> ``` java
 >>> final public class Json;
