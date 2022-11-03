@@ -1,8 +1,7 @@
 package util;
 
 /**
- * 타입에 관계 없이, 다양한 타입의 객체를 저장할 수 있게 해주는 Database 클래스.<br />
- * 단, equals 체크를 하지 않기 때문에, 중복된 객체가 저장될 수 있다.
+ * 타입에 관계 없이, 다양한 타입의 객체를 저장할 수 있게 해주는 Database 클래스.
  * @author 환류상
  */
 final public class Database {
