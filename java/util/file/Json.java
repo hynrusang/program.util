@@ -74,7 +74,7 @@ final public class Json extends FileDependency {
 					}
 				} else {
 					String parse = "[ ";
-					for (int i = 0; this.values.get(index, Database.class).isExist(i); i++) {
+					for (int i = 0; i < this.values.get(index, Database.class).length(); i++) {
 						if (this.values.get(index, Database.class).get(i, Object.class).getClass() == String.class) 
 							parse += "\"" + this.values.get(index, Database.class).get(i, String.class) + "\", ";
 						else 

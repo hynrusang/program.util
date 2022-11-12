@@ -19,8 +19,8 @@ final public class Database {
 	 * @throws ClassCastException <span style="font-weight: bold;">type</span>가 <span style="color: purple; font-weight: bold;">null</span>이거나, <span style="font-weight: bold;">index</span>번째 객체가 <span style="font-weight: bold;">type</span> 객체로 다운캐스팅 될 수 없을 때 발생.
 	 */
 	public<T> T get(int index, Class<T> type) throws IndexOutOfBoundsException, ClassCastException {
-		if (!isExist(index)) throw new IndexOutOfBoundsException("잘못된 index에 접근중입니다. (접근하려는 index:" + index + " 최대 접근가능한 index:" + (database.length - 1)+ ")");
-		else if (type == null) throw new ClassCastException("type는 null일 수 없습니다."); 
+		checkIndex(index);
+		if (type == null) throw new ClassCastException("type는 null일 수 없습니다."); 
 		else if (!type.isInstance(database[index])) throw new ClassCastException(index+ "번째 " + database[index].getClass() + " 객체는 " + type + " 객체로 다운캐스팅 될 수 없습니다.");
 		return type.cast(database[index]); 
 	}
@@ -30,11 +30,11 @@ final public class Database {
 	 */
 	public int length() { return database.length; }
 	/**
-	 * <span style="font-weight: bold;">index</span>번째 요소 접근이 가능한지의 여부를 반환.
+	 * <span style="font-weight: bold;">index</span>번째 요소 접근이 가능한지의 여부를 체크
 	 * @param index : <span style="color:blue; font-weight: bold;">int</span>
-	 * @return <span style="font-weight: bold;">index</span>번째 요소 접근이 가능한지의 여부.
+	 * @throws IndexOutOfBoundsException <span style="font-weight: bold;">index</span>가 음수거나, 허용가능한 범위를 벗어났을 때 발생.
 	 */
-	public boolean isExist(int index) { return (0 <= index && index < database.length); }
+	public void checkIndex(int index) throws IndexOutOfBoundsException { if (index < 0 || database.length <= index) throw new IndexOutOfBoundsException("잘못된 index에 접근중입니다. (접근하려는 index:" + index + " 최대 접근가능한 index:" + (database.length - 1)+ ")"); }
 	/**
 	 * <span style="font-weight: bold;">object</span>가 위치해 있는 index를 반환.
 	 * @param object : {<span style="color:blue; font-weight: bold;">Object: </span><span style="color:purple; font-weight: bold;">super</span>}
@@ -66,18 +66,17 @@ final public class Database {
 	 * @param index : <span style="color:blue; font-weight: bold;">int</span>
 	 */
 	public void remove(int index) {
-		if (isExist(index)) {
-			Object[] temp = new Object[length() - 1];
-			int correctIndex = 0;
-			for (int i = 0; i < length(); i++) {
-				if (i == index) continue;
-				else {
-					temp[correctIndex] = database[i];
-					correctIndex++;
-				}
+		checkIndex(index);
+		Object[] temp = new Object[length() - 1];
+		int correctIndex = 0;
+		for (int i = 0; i < length(); i++) {
+			if (i == index) continue;
+			else {
+				temp[correctIndex] = database[i];
+				correctIndex++;
 			}
-			database = temp;
-		} else System.out.println("잘못된 index에 접근중입니다. (접근하려는 index:" + index + " 최대 접근가능한 index:" + (database.length - 1)+ ")");
+		}
+		database = temp;
 	}
 	/**
 	 * 현재 데이터들을 모두 \n 형식으로 연결한 문자열을 반환.
